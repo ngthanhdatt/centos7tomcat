@@ -8,7 +8,7 @@ ARG WORK_DIR=/opt
 
 # build arguments for TOMCAT product installation
 ARG TOMCAT_SERVER_NAME=apache-tomcat
-ARG TOMCAT_SERVER_VERSION=9.0.44
+ARG TOMCAT_SERVER_VERSION=9.0.50
 ARG TOMCAT_SERVER=${TOMCAT_SERVER_NAME}-${TOMCAT_SERVER_VERSION}
 ARG TOMCAT_SERVER_HOME=${WORK_DIR}/${TOMCAT_SERVER}
 
@@ -28,7 +28,7 @@ ENV WORKING_DIRECTORY=${WORK_DIR} \
     TOMCAT_SERVER_HOME=${TOMCAT_SERVER_HOME}
 
 # expose ports
-EXPOSE 8080
+EXPOSE 443
 
 # initiate container and start Tomcat server
 ENTRYPOINT ["/opt/docker-entrypoint.sh"]
